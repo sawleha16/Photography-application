@@ -1,0 +1,10 @@
+<h1>Welcome to Album!</h1>
+<ul>
+  <% @albums.each do |album| %>
+    <li>
+       <a href="/albums/<%= album.id %>">
+        <%= album.name %>
+       </li>
+  <% end %>
+</ul>
+<a href="/albums/new">Add new album</a>
