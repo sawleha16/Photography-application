@@ -19,20 +19,21 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find(params[:id])
   end
-   #
-   #   def edit
-   #     @album = Album.find(params[:id])
-   #   end
-   #
-   #   def update
-   #      @album = Album.find(params[:id])
-   #
-   #      if @album.update(article_params)
-   #        redirect_to @album
-   #      else
-   #        render :edit, status: :unprocessable_entity
-   #      end
-   #    end
+
+  def edit
+    @album = Album.find(params[:id])
+  end
+
+   def update
+      @album = Album.find(params[:id])
+
+      if @album.update(album_params)
+        redirect_to "/albums/#{@album.id}"
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    end
+
    private
 
    def album_params

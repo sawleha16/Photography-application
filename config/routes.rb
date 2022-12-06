@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/albums", to: "albums#index"
   post "/albums", to: "albums#create"
   get "/albums/:id/edit", to: "albums#edit"
+  put "/albums/:id", to: "albums#update"
+  patch "/albums/:id", to: "albums#update"
   get "/albums/new", to: "albums#new"
   get "/albums/:id", to: "albums#show"
   get "/albums", to: "albums#form"
