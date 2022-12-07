@@ -2,5 +2,9 @@
 <p><%= @album.description %></p>
 <ul>
   <li><%= link_to "Edit", "/albums/#{@album.id}/edit"%></li>
+  <li><%= link_to "Destroy","/albums/#{@album.id}", data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
 
 </ul>
