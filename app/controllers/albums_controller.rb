@@ -40,6 +40,13 @@ class AlbumsController < ApplicationController
     redirect_to root_path, status: :see_other
   end
 
+    def destroy
+   @album= Album.find(params[:id])
+   @album.destroy
+
+   redirect_to root_path, status: :see_other
+ end
+
    private
 
    def album_params

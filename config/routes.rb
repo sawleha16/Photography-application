@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   get "/albums/:id", to: "albums#show"
   get "/albums", to: "albums#form"
   delete "/albums/:id", to: "albums#destroy"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 26a98beddbd712316bc56ac363d1bd3273399f5b
 end
