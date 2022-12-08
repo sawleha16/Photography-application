@@ -5,17 +5,17 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
 
   get "/albums", to: "albums#index"
+  get "/albums/new", to: "albums#new"
   post "/albums", to: "albums#create"
   get "/albums/:id/edit", to: "albums#edit"
   put "/albums/:id", to: "albums#update"
   patch "/albums/:id", to: "albums#update"
-  get "/albums/new", to: "albums#new"
   get "/albums/:id", to: "albums#show"
-  get "/albums", to: "albums#form"
   delete "/albums/:id", to: "albums#destroy"
-<<<<<<< HEAD
-=======
 
+  get "/albums/:album_id/photos/new", to: "photos#new"
+  post "/albums/:album_id/photos", to: 'photos#create'
 
->>>>>>> 26a98beddbd712316bc56ac363d1bd3273399f5b
+  #get "/album/:id/comments", to: 'comments#create'
+
 end
