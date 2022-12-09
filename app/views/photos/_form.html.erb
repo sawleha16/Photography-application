@@ -1,0 +1,21 @@
+<%#= image_tag photo.image %>
+<%= form_with model: photo, url: "/albums/#{@album.id}/photos/#{photo.id}" do |form| %>
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+    <% photo.errors.full_messages_for(:image).each do |message| %>
+    <div><%= meassage%></div>
+    <%end%>
+  </div>
+  <div>
+    <%= form.label :caption %>
+    <%= form.text_field :caption %>
+    <% photo.errors.full_messages_for(:caption).each do |message| %>
+    <div><%= meassage%></div>
+    <%end%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+  <% end %>

@@ -15,7 +15,8 @@ Rails.application.routes.draw do
 
   get "/albums/:album_id/photos/new", to: "photos#new"
   post "/albums/:album_id/photos", to: 'photos#create'
-
-  #get "/album/:id/comments", to: 'comments#create'
-
+  get "/albums/:album_id/photos/:id/edit", to: 'photos#edit'
+  put "/albums/:album_id/photos/:id", to: "photos#update"
+  patch "/albums/:album_id/photos/:id", to: "photos#update"
+  delete "/albums/:album_id/photos/:id", to: "photos#destroy"
 end
