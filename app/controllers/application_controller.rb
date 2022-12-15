@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :confirgure_permitted_parameters, if: :devise_controller?
-
+  
   protected
 
   def confirgure_permitted_parameters
