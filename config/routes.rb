@@ -20,5 +20,6 @@ end
   get "/albums/:album_id/photos/:id/edit", to: 'photos#edit'
   put "/albums/:album_id/photos/:id", to: "photos#update"
   patch "/albums/:album_id/photos/:id", to: "photos#update"
+  get "/albums/:album_id/photos/:id/show", to: "photos#show"
   delete "/albums/:album_id/photos/:id", to: "photos#destroy"
 end
