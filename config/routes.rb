@@ -20,6 +20,12 @@ end
   get "/albums/:album_id/photos/:id/edit", to: 'photos#edit'
   put "/albums/:album_id/photos/:id", to: "photos#update"
   patch "/albums/:album_id/photos/:id", to: "photos#update"
-  get "/albums/:album_id/photos/:id/show", to: "photos#show"
+  get "/albums/:album_id/photos/:id", to: "photos#show"
   delete "/albums/:album_id/photos/:id", to: "photos#destroy"
+
+  post "/albums/:album_id/photos/:photo_id/comments", to: 'comments#create'
+  get "/albums/:album_id/photos/:photo_id/comments/:id/edit", to: 'comments#edit'
+  put "/albums/:album_id/photos/:photo_id/comments/:id", to: 'comments#update'
+  patch "/albums/:album_id/photos/:photo_id/comments/:id", to: 'comments#update'
+  delete "/albums/:album_id/photos/:photo_id/comments/:id", to: 'comments#destroy'
 end

@@ -1,0 +1,15 @@
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+
+<li><%= link_to "Edit", "/albums/#{@album.id}/photos/#{@photo.id}/comments/#{comment.id}/edit"%></li>
+<li><%= link_to "Destroy","/albums/#{@album.id}/photos/#{@photo.id}/comments/#{comment.id}", data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                }%></li>

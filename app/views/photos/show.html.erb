@@ -5,4 +5,11 @@
   <strong>Caption:</strong>
   <%= photo.caption%>
 </p>
+
+<h2>Comments</h2>
+<%= render @photo.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
 <% end %>
