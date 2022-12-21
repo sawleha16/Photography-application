@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @photos = Photo.all
   end
@@ -8,6 +8,11 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
     @album = Album.find(params[:album_id])
+  end
+
+  def show
+    @album = Album.find(params[:album_id])
+    @photo = Photo.find(params[:id])
   end
 
   def create

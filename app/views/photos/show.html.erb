@@ -1,0 +1,15 @@
+<% @album.photos.each do |photo|%>
+  <%= image_tag(photo.image, size: "400x400") %></a>
+    <li><%= link_to "update", "/albums/#{@album.id}/photos/#{photo.id}/edit"%></li>
+<p>
+  <strong>Caption:</strong>
+  <%= photo.caption%>
+</p>
+
+<h2>Comments</h2>
+<%= render @photo.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<% end %>
