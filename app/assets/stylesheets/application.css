@@ -14,7 +14,7 @@
  *= require_self
  */
 
- <style>
+
 a:link {
   color: green;
   background-color: transparent;
@@ -38,4 +38,3 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
-</style>
