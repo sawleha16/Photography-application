@@ -3,4 +3,5 @@ class Album < ApplicationRecord
    has_many :photos
   validates :name, presence: true
   validates :description, presence: true
+  belongs_to :user
 end

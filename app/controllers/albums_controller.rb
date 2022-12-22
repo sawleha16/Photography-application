@@ -1,8 +1,8 @@
 class AlbumsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
-    @albums = Album.all
+    @albums =Album.where(user_id: current_user.id)
   end
 
   def new
@@ -11,6 +11,7 @@ class AlbumsController < ApplicationController
 
   def create
      @album = Album.new(album_params)
+     @album.user_id = current_user.id
     if @album.save
       redirect_to "/albums/#{@album.id}"
     else
