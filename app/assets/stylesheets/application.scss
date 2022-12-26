@@ -35,7 +35,6 @@
    z-index: 2;
  }
 
-
  .myform input[type="email"] {
    margin-bottom: -1px;
    border-bottom-right-radius: 0;
@@ -46,28 +45,4 @@
    margin-bottom: -1px;
    border-top-left-radius: 0;
    border-top-right-radius: 0;
- }
-
-
- .myform {
-   align-items: center;
-   padding-top: 40px;
-   padding-bottom: 40px;
- }
-
- .myform {
-   max-width: 330px;
-   padding: 15px;
- }
-
- .myform .form-floating:focus-within {
-   z-index: 2;
- }
-
- .myform input[type="email"] {
-   margin-bottom: -1px;
- }
-
- .myform input[type="password"] {
-   margin-bottom: -1px;
  }
