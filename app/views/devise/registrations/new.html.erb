@@ -1,46 +1,43 @@
 <div class= "text-center">
-<h2>Sign up</h2>
-<div class= "mysignupform">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name),data: {turbo: false}) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="mysignupform w-100 m-auto">
+    <h2>Sign up</h2>
+    <div class= "mysignupform">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="form-floating mb-3">
+      <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email", placeholder: "name@example.com" %>
+        <%= f.label :email %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class="form-floating">
+      <%= f.password_field :password, class:"form-control", autocomplete: "new-password", placeholder: "password" %>
+      <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="form-floating mb-3">
+      <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password", placeholder:"password" %>
+      <%= f.label :password_confirmation %>
+    </div>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autocomplete: "username" %>
-  </div>
+    <div class="form-floating mb-3">
+      <%= f.text_field :username, class: "form-control", autocomplete: "username", placeholder: "username" %>
+      <%= f.label :username %>
+    </div>
 
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age, autocomplete: "age" %>
-  </div>
+    <div class="form-floating mb-3">
+      <%= f.text_field :age, class: "form-control", autocomplete: "age", placeholder: "age" %>
+      <%= f.label :age %>
+    </div>
 
-  <div class="field">
-    <%= f.label :interests%><br />
-    <%= f.select(:interests, User::INTEREST_FIELD, { include_blank: true })%><br />
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-</div>
+    <div class="form-floating">
+      <%= f.select(:interests, User::INTEREST_FIELD, { prompt: "Choose interests"}, class: "form-select")%>
+      <%= f.label :interests%>
+    </div>
+      <%= f.submit "Sign up", class: 'w-100 btn btn-lg btn-primary mt-3 mb-3' %>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
