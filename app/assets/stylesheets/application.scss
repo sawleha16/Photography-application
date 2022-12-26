@@ -20,54 +20,54 @@
    background-color: #f5f5f5;
  }
 
- .myloginform {
+ .myform {
    align-items: center;
    padding-top: 40px;
    padding-bottom: 40px;
  }
 
- .myloginform {
+ .myform {
    max-width: 330px;
    padding: 15px;
  }
 
- .myloginform .form-floating:focus-within {
+ .myform .form-floating:focus-within {
    z-index: 2;
  }
 
 
- .myloginform input[type="email"] {
+ .myform input[type="email"] {
    margin-bottom: -1px;
    border-bottom-right-radius: 0;
    border-bottom-left-radius: 0;
  }
 
- .myloginform input[type="password"] {
+ .myform input[type="password"] {
    margin-bottom: -1px;
    border-top-left-radius: 0;
    border-top-right-radius: 0;
  }
 
 
- .mysignupform {
+ .myform {
    align-items: center;
    padding-top: 40px;
    padding-bottom: 40px;
  }
 
- .mysignupform {
+ .myform {
    max-width: 330px;
    padding: 15px;
  }
 
- .mysignupform .form-floating:focus-within {
+ .myform .form-floating:focus-within {
    z-index: 2;
  }
 
- .mysignupform input[type="email"] {
+ .myform input[type="email"] {
    margin-bottom: -1px;
  }
 
- .mysignupform input[type="password"] {
+ .myform input[type="password"] {
    margin-bottom: -1px;
  }

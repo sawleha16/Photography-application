@@ -1,7 +1,7 @@
 <div class="text-center">
-  <div class="myloginform w-100 m-auto">
+  <div class="myform w-100 m-auto">
     <%= image_tag "bootstrap-logo.svg", class: "mb-4", width: "72", height: "57"%>
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name),data: {turbo: false}) do |f| %>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
