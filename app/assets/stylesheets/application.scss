@@ -17,15 +17,26 @@
  html,
  body {
    height: 100%;
+   background-color: #f5f5f5;
  }
 
  .myloginform {
    align-items: center;
    padding-top: 40px;
    padding-bottom: 40px;
-   background-color: #f5f5f5;
  }
- .mylogin input[type="email"] {
+
+ .myloginform {
+   max-width: 330px;
+   padding: 15px;
+ }
+
+ .myloginform .form-floating:focus-within {
+   z-index: 2;
+ }
+
+
+ .myloginform input[type="email"] {
    margin-bottom: -1px;
    border-bottom-right-radius: 0;
    border-bottom-left-radius: 0;
