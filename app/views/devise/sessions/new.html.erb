@@ -5,13 +5,13 @@
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
-            <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email", placeholder: "name@example.com" %>
-            <%= f.label :email%>
+          <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email", placeholder: "name@example.com" %>
+          <%= f.label :email%>
         </div>
 
         <div class="form-floating">
-            <%= f.password_field :password, class: "form-control", autocomplete: "current-password", placeholder: "password" %>
-            <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control", autocomplete: "current-password", placeholder: "password" %>
+          <%= f.label :password %>
         </div>
 
         <% if devise_mapping.rememberable? %>
