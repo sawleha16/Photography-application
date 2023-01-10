@@ -2,7 +2,7 @@ RSpec.describe User, type: :model do
   context 'validations' do
     context 'username' do
       specify do
-        u = User.new(email: 'abc@gmail.com', password: '1234test', age: 24, username: nil)
+        u = build(:user, username: nil)
         expect(u.valid?).to eq(false)
         expect(u.errors.messages).to eq({username: ["can't be blank"]})
       end
@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
 
     context 'age' do
       specify do
-        u = User.new(email: 'abc@gmail.com', password: '1234test', age: nil, username: 'abc')
+        u = build(:user, age: nil)
         expect(u.valid?).to eq(false)
         expect(u.errors.messages).to eq({age: ["can't be blank"]})
       end
