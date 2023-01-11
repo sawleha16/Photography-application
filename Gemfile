@@ -14,7 +14,7 @@ gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
-gem 'pg'
+# gem 'pg'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -53,7 +53,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_bot_rails', '~> 6.2'  
+  gem 'factory_bot_rails', '~> 6.2'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
