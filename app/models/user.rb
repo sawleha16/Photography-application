@@ -7,6 +7,6 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable, :lockable, :trackable
-  INTEREST_FIELD =['Wedding', 'Events', 'Potraits']
+         :lockable, :trackable
+  INTEREST_FIELD = ['Wedding', 'Events', 'Potraits']
 end
