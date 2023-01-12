@@ -1,8 +1,8 @@
 RSpec.describe 'index page', type: :feature do
   def user_login_form(email, password)
     within('form#new_user') do
-      fill_in 'Email', with: 'abc@gmail.com'
-      fill_in 'Password', with: '1234test'
+      fill_in 'Email', with: email
+      fill_in 'Password', with: password
       find('input[type=submit]').click
       visit'/'
     end

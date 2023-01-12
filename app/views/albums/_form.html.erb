@@ -1,4 +1,4 @@
-<%= form_with  model: album, url: url do |form| %>
+<%= form_with  model: album, id: "album_form",  url: url do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
