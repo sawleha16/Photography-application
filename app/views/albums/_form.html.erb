@@ -1,17 +1,17 @@
-<%= form_with  model: album, url: url do |form| %>
+<%= form_with  model: album, id: "album_form",  url: url do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
     <% album.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
+      <div  id="name_error"><%= message %></div>
     <% end %>
   </div>
 
-  <div>
+  <div >
     <%= form.label :description %><br>
     <%= form.text_area :description %>
-    <%  album.errors.full_messages_for(:name).each do |message| %>
-    <div><%= message %></div>
+    <% album.errors.full_messages_for(:description).each do |message| %>
+    <div id="description_error"><%= message %></div>
   <% end %>
   </div>
 
