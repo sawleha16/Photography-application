@@ -24,7 +24,7 @@ RSpec.describe 'Albums', type: :feature do
     specify  do
       visit root_path
       expect(page).to have_current_path('/users/sign_in')
-        user_login_form('abc@gmail.com', '1234test')
+      user_login_form('abc@gmail.com', '1234test')
 
       visit "/albums/new"
       expect do
@@ -39,7 +39,7 @@ RSpec.describe 'Albums', type: :feature do
 
       visit "/albums/new"
       expect do
-        album_form(nil,nil)
+      album_form(nil,nil)
       end.to change(Album, :count).by(0)
       expect(page).to have_css('#name_error', exact_text: "Name can't be blank")
       expect(page).to have_css('#description_error', exact_text: "Description can't be blank")
