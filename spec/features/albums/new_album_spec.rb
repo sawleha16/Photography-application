@@ -28,14 +28,14 @@ RSpec.describe 'Albums', type: :feature do
 
       visit "/albums/new"
       expect do
-        album_form('party','xyz xyz')
+      album_form('party','xyz xyz')
       end.to change(Album, :count).by(1)
     end
 
     specify do
       visit root_path
       expect(page).to have_current_path('/users/sign_in')
-        user_login_form('abc@gmail.com', '1234test')
+      user_login_form('abc@gmail.com', '1234test')
 
       visit "/albums/new"
       expect do
