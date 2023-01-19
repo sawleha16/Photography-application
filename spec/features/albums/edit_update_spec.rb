@@ -27,8 +27,8 @@ RSpec.describe 'Album', type: :feature do
       user_login_form('abc@gmail.com', '1234test')
       expect(page).to have_css('#albums', exact_text: 'abcd')
       click_link('abcd')
-      expect(page). to have_link("Edit")
-      click_link('Edit')
+      expect(page). to have_link("Edit Album")
+      click_link('Edit Album')
       visit  "/albums/#{album.id}/edit"
       album_form('xyz','hdt hdt')
       expect(page).to have_css('#aname', exact_text: 'xyz')

@@ -1,10 +1,10 @@
-<%= form_with model: @photo, url: "/albums/#{@album.id}/photos" do |form| %>
+<%= form_with model: @photo, id:"photo_form", url: "/albums/#{@album.id}/photos" do |form| %>
   <div>
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
 
-  <div>
+  <div id="caption">
     <%= form.label :caption %>
     <%= form.text_area :caption%>
   </div>
