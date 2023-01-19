@@ -2,8 +2,8 @@
 
 <p><%= @album.description %></p>
 <ul>
-  <li><%= link_to "Edit", "/albums/#{@album.id}/edit"%></li>
-  <li><%= link_to "Destroy","/albums/#{@album.id}", data: {
+  <li><%= link_to "Edit Album", "/albums/#{@album.id}/edit"%></li>
+  <li><%= link_to "Delete Album","/albums/#{@album.id}", data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></li>
@@ -13,8 +13,8 @@
 <% @album.photos.each do |photo|%>
   <%= image_tag(photo.image, size: "400x400") %></a>
   <li><%= link_to "view", "/albums/#{@album.id}/photos/#{photo.id}"%></li>
-  <li><%= link_to "Edit", "/albums/#{@album.id}/photos/#{photo.id}/edit"%></li>
-  <li><%= link_to "Destroy", "/albums/#{@album.id}/photos/#{photo.id}", data: {
+  <li><%= link_to "Edit Photo", "/albums/#{@album.id}/photos/#{photo.id}/edit"%></li>
+  <li><%= link_to "Delete Photo", "/albums/#{@album.id}/photos/#{photo.id}", data: {
                    turbo_method: :delete,
                    turbo_confirm: "Are you sure?"
                  } %></li>

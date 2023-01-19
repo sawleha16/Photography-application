@@ -1,5 +1,5 @@
 <%#= image_tag photo.image %>
-<%= form_with model: photo, url: "/albums/#{@album.id}/photos/#{photo.id}" do |form| %>
+<%= form_with model: photo, id:"photo_form", url: "/albums/#{@album.id}/photos/#{photo.id}" do |form| %>
   <div>
     <%= form.label :image %>
     <%= form.file_field :image %>
