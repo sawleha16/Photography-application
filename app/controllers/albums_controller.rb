@@ -1,5 +1,6 @@
 class AlbumsController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_album, only: [:show, :edit, :update, :destroy]
 
   def index
     @albums = Album.where(user_id: current_user.id)
@@ -19,17 +20,11 @@ class AlbumsController < ApplicationController
     end
   end
 
-  def show
-    @album = Album.find(params[:id])
-  end
+  def show; end
 
-  def edit
-    @album = Album.find(params[:id])
-  end
+  def edit;end
 
   def update
-    @album = Album.find(params[:id])
-
     if @album.update(album_params)
       redirect_to "/albums/#{@album.id}"
     else
@@ -38,12 +33,14 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
-    @album= Album.find(params[:id])
     @album.destroy
     redirect_to root_path, status: :see_other
   end
 
    private
+   def find_album
+     @album = Album.find(params[:id])
+   end
 
    def album_params
      params.require(:album).permit(:name, :description, :images, :caption)
