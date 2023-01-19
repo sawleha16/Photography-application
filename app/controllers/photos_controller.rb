@@ -1,6 +1,8 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!
   before_action :find_album_object, only: [:new, :show, :create, :edit, :update, :destroy]
+  before_action :find_photo_object, only: [ :show, :edit, :update, :destroy]
+
 
   def index
     @photos = Photo.all
@@ -35,11 +37,14 @@ class PhotosController < ApplicationController
 
   private
   def find_album_object
-    @photo = Photo.find(params[:id])
     @album = Album.find(params[:album_id])
   end
 
-    def photo_params
-      params.require(:photo).permit(:image, :caption)
-    end
+  def find_photo_object
+    @photo = Photo.find(params[:id])
+  end
+
+  def photo_params
+    params.require(:photo).permit(:image, :caption)
+  end
 end
